@@ -30,7 +30,7 @@
 
 
 
-//business logics
+// business logics
 function Pizza(customer) {
   this.customer = customer;
   this.price = [];
@@ -49,7 +49,23 @@ Price.prototype.totalPrice = function() {
   return this.size + ", " + this.topping;
 }
 
-// // user interface logic
+// / //user interface logic
+$(document).ready(function() {
+  $("form#movies").submit(function(event){
+      event.preventDefault();
+    // var run = parseInt($("#run").val());//change this to movie title
+    var run = parseInt($("#run").val());
+    var time = parseInt($("#time").val());
+    var age = parseInt($("#age").val());
+    var newTicket = new Ticket(run, time, age);
+    $("#show-price").show();
+    $("#price").text(newTicket.ticketPrice());
+  });
+
+});
+
+
+// user interface logic
 // $(document).ready(function() {
 //
 //   $("#add-address").click(function() {
