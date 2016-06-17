@@ -5,24 +5,24 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pizza</title>
+    <title>Order Pizza</title>
   </head>
   <body>
     <div class="container">
-      <h1>Pizza</h1>
+      <h1>Order Pizza</h1>
       <form id="pizza">
         <h3>Choose a size</h3>
-          <select class="form-control" id="size">
+        <select class="form-control" id="size">
             <option value="10">Small<small></option>
             <option value="15">Large</option>
           </select>
-        <h3>toppings</h3>
-          <select class="form-control" id="topping">
-            <option value="2">mushrooms</option>
-            <option value="2">onions</option>
-          </select>
-        <button type="submit" class="btn">Pizza price:</button>
-      </form>
+        <h3>Choose toppings</h3>
+            <input type="checkbox" name="choices" value ="1" id="mushroom">mushrooms<br>
+            <input type="checkbox" name="choices" value ="2" id="feta">feta<br>
+            <input type="submit" value="Submit">
+          </form>
+        <!-- <button type="submit" class="btn">Pizza price:</button>
+      </form> -->
 
       <div id="show-price">
       <p>$<span id=price></span></p>

@@ -28,25 +28,23 @@
 //
 // });
 
-
-
 //business logics
 function Pizza(customer) {
   this.customer = customer;
-  this.price = "";
-}
-
-function Price(size, topping) {
-  this.size = size;
-  this.topping = topping;
+  this.price = [];
 }
 
 // Pizza.prototype.order = function() {
 //   return this.customer + " " + this.price;
-//
+
+function Price(size, mushroom, feta) {
+  this.size = size;
+  this.mushroom = mushroom;
+  this.feta = feta;
+}
 
 Price.prototype.totalPrice = function() {
-  return this.size + this.topping;
+  return this.size + this.mushroom + this.feta;
 }
 
 // / //user interface logic
@@ -55,8 +53,10 @@ $(document).ready(function() {
       event.preventDefault();
     // var customer = $("#customer").val();
     var size = parseInt($("#size").val());
-    var topping = parseInt($("#topping").val());
-    var newPrice = new Price(size, topping);
+    // var  = parseInt($("#topping").val());
+    var mushroom = parseInt($("#mushroom").val());
+    var feta = parseInt($("#feta").val());
+    var newPrice = new Price(size, mushroom, feta);
     // var newPizza = new Pizza(customer)
     $("#show-price").show();
     $("#price").text(newPrice.totalPrice());

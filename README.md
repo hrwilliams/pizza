@@ -1,6 +1,6 @@
-# address-book
+# Order Pizza
 
-##### Epicodus Section: JavaScript OO - Address Book
+##### Epicodus Independent Project: JavaScript OO - Order Pizza
 
 #### By HR Williams
 
@@ -17,7 +17,7 @@ A user will choose toppings and $2 will be added for each topping | mushrooms | 
 
 ## Setup
 
-Install address-book by cloning this repository.
+Install pizza by cloning this repository.
 
 
 ## Technologies Used
