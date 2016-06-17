@@ -1,5 +1,5 @@
 // // //busines logic
-// function Ticket(run, time, age) {
+// function Ticket(run, time, age, price) {
 //   // this.movie = movie;
 //   this.run = run;
 //   this.time = time;
@@ -30,36 +30,36 @@
 
 
 
-// business logics
+//business logics
 function Pizza(customer) {
   this.customer = customer;
-  this.price = [];
+  this.price = "";
 }
 
 function Price(size, topping) {
   this.size = size;
-  this.topping = price;
+  this.topping = topping;
 }
 
-// Contact.prototype.fullName = function() {
-//   return this.firstName + " " + this.lastName;
-// }
+// Pizza.prototype.order = function() {
+//   return this.customer + " " + this.price;
+//
 
 Price.prototype.totalPrice = function() {
-  return this.size + ", " + this.topping;
+  return this.size + this.topping;
 }
 
 // / //user interface logic
 $(document).ready(function() {
-  $("form#movies").submit(function(event){
+  $("form#pizza").submit(function(event){
       event.preventDefault();
-    // var run = parseInt($("#run").val());//change this to movie title
-    var run = parseInt($("#run").val());
-    var time = parseInt($("#time").val());
-    var age = parseInt($("#age").val());
-    var newTicket = new Ticket(run, time, age);
+    // var customer = $("#customer").val();
+    var size = parseInt($("#size").val());
+    var topping = parseInt($("#topping").val());
+    var newPrice = new Price(size, topping);
+    // var newPizza = new Pizza(customer)
     $("#show-price").show();
-    $("#price").text(newTicket.ticketPrice());
+    $("#price").text(newPrice.totalPrice());
   });
 
 });
