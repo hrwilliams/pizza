@@ -5,23 +5,57 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pizza</h1>
+      <form id="pizza">
+        <h3>Choose a size</h3>
+          <select class="form-control" id="size">
+            <option value="10">Small $10<small></option>
+            <option value="15">Large $15</option>
+            <option value="17">X-Large $17</option>
+          </select>
+        <h3>toppings</h3>
+          <select class="form-control" id="topping">
+            <option value="2">mushrooms $2</option>
+            <option value="2">onions $2</option>
+          </select>
+        <button type="submit" class="btn">Pizza price:</button>
+      </form>
+      <div id="show-price">
+        <p>$<span id=price></span></p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Order Pizza</title>
   </head>
   <body>
     <div class="container">
       <h1>Order Pizza</h1>
       <form id="pizza">
-        <h3>Choose a size</h3>
-        <form class="size">
-        <select class="form-control" class="size">
-          <option value="10">Small</option>
-          <option value="15">Large</option>
-        </select>
-        <!-- <button type="submit" class="btn">Next</button> -->
-      </form>
-        <div id="show-toppings">
+          <div class = "form-group">
+          <label for="size-group">Choose a size</label>
+          <br>
+          <select id="size" class="form-control" >
+            <option value="10">Small $10</option>
+            <option value="15">Large $15</option>
+          </select>
+        </div>
+        </br>
+        <div class="form-group">
           <h3>Choose toppings</h3>
-          <form action="demo_form.asp">
             <p>$2:</p>
             <label><input type="checkbox" name="toppings" value ="2" id="goat-cheese">goat cheese</label><br>
             <label><input type="checkbox" name="toppings" value ="2" id="sun-dried-tomatoes">sun-dried-tomatoes</label><br>
@@ -33,18 +67,13 @@
             <label><input type="checkbox" name="toppings" value ="1" id="red-onion">red onion</label><br>
             <label><input type="checkbox" name="toppings" value ="1" id="pinapple">pinapple</label><br>
             <label><input type="checkbox" name="toppings" value ="1" id="mushrooms">mushrooms</label><br>
-            <!-- <label><input type="submit" value="Submit"> -->
-          </form>
-          <!-- <span class="btn btn-primary" id="submit-toppings">order</span> -->
         </div>
-        <span class="btn btn-primary" id="submit-toppings">order</span>
+          </form>
+        <button type="submit" id="button">Click here to Order</button>
       </form>
-
       <div id="show-price">
-      <p>$<span id=price></span></p>
-      </div>
-
+      <p>Price: $<span id=price></span></p>
       </div>
     </div>
   </body>
-</html>
+</html> -->
